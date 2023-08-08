@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <!-- bootstrap creation -->
+    <script src="https://ui5.sap.com/resources/sap-ui-core.js" data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_fiori_3_dark" data-sap-ui-bindingSyntax="complex" data-sap-ui-resourceroots='{
+                "Asset" : "./"
+             }'>
+            </script>
+    <script>
+        // To create object of our component.js file
+        // It will scan for webapp folder and look for Component.js file
+        var oCompContainer = new sap.ui.core.ComponentContainer({
+            name: "Asset"
+        });
+        oCompContainer.placeAt("maincontent");
+    </script>
+</head>
+
+<body class="sapUiBody">
+    <div id="maincontent"> </div>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+specVersion: '3.0'
+metadata:
+  name: asset-managment
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        backend:
+          - path: /sap
+            url: http://s4h:4000
+            client: '100'
+            destination: S4H

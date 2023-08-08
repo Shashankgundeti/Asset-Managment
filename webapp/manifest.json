@@ -1,0 +1,84 @@
+{
+    "_version":"1.50.0",
+    "sap.app":{
+        "id":"Asset",
+        "type":"application",
+        "_version": "1.18.0",
+        "ach": "STX",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "dataSources": {
+            "mainService": {
+              "uri": "/sap/opu/odata/sap/ZAM_ODATA_SRV/",
+              "type": "OData",
+              "settings": { 
+                "odataVersion": "2.0"
+              }
+            }
+        },
+        "i18n": "i18n/i18n.properties",
+        "title":"{{appTitle}}",
+        "description":"{{appDescription}}"
+    },
+    "sap.ui": { 
+        "deviceTypes":{
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "fullWidth": true,
+        "supportedThemes": ["sap_fiori_3_dark","sap_horizon"],
+        "technology": "UI5",
+        "icons": {}
+    },
+    "sap.ui5":{
+        "dependencies": {
+            "minUI5Version": "1.110.0",
+            "libs": {
+                "sap.ui.core" :{"minVersion": "1.110.0"},
+                "sap.m":{"minVersion": "1.110.0"},
+                "sap.ui.layout":{"minVersion": "1.110.0"}
+            }
+            
+        },
+        "contentDensities": {"cozy": true,"compact": true},
+        "rootView":{
+            "viewName": "Asset.view.App",
+            "id": "idRootView",
+            "type": "XML"
+        },
+        "routing": {
+            "config":{
+               "routerClass": "sap.m.routing.Router",
+               "viewPath": "Asset.view",
+               "viewType": "XML",
+               "controlId": "idAppCon"
+            },
+            "routes": [ 
+                {
+                    "name": "sha",
+                    "pattern": "",
+                    "target" :["sha","shi"]
+                }
+           
+        ],
+            "targets": {
+              "sha":{
+                "viewName": "Assetdetails",
+                "viewType": "XML",
+                "controlAggregation": "masterPages",
+                "viewId": "idAssetdetails"   
+              }
+            }
+        },
+        "models": {
+            "":{
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {}
+            }
+             
+        }
+    }
+}
