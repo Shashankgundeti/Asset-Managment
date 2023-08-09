@@ -4,7 +4,7 @@
         "id":"Asset",
         "type":"application",
         "_version": "1.18.0",
-        "ach": "STX",
+        "ach": "AST-MNG",
         "applicationVersion": {
             "version": "1.0.0"
         },
@@ -57,17 +57,17 @@
             },
             "routes": [ 
                 {
-                    "name": "sha",
+                    "name": "firstpage",
                     "pattern": "",
-                    "target" :["sha","shi"]
+                    "target" :["main"]
                 }
            
         ],
             "targets": {
-              "sha":{
+              "main":{
                 "viewName": "Assetdetails",
                 "viewType": "XML",
-                "controlAggregation": "masterPages",
+                "controlAggregation": "pages",
                 "viewId": "idAssetdetails"   
               }
             }

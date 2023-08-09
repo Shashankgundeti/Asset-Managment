@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns:t="sap.ui.table" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+
+<Button text="Register" press="onRegister" icon="sap-icon://add" tooltip="New register"></Button>
+
+<Button text="Edit" press="onEdit" icon="sap-icon://edit" tooltip="Edit existing"></Button>
+<Button text="Disposition" press="onDesposition" icon="sap-icon://delete" tooltip="disposition"></Button>
+<t:Table  id="table" rows="{path : '/AssignedAssetSet'}" selectionMode= "Single" rowSelectionChange="onRowChange">
+<t:columns>
+<t:Column label = "ASSET NAME">
+<t:template>
+ <Text text= "{AssetName}"></Text>
+</t:template>
+</t:Column>
+<t:Column label = "ASSET TYPE">
+<t:template>
+ <Text text= "{AssetType}"></Text>
+</t:template>
+</t:Column>
+<t:Column label = "MODEL NUMBER">
+<t:template>
+ <Text text= "{ModelNumber}"></Text>
+</t:template>
+</t:Column>
+<t:Column label = "SERIAL NUMBER">
+<t:template>
+ <Text text= "{SerialNumber}"></Text>
+</t:template>
+</t:Column>
+<t:Column label = "ASSET LOCATION">
+<t:template>
+ <Text text= "{Salary}"></Text>
+</t:template>
+</t:Column>
+</t:columns>
+</t:Table>
+</core:FragmentDefinition>

@@ -1,3 +1,12 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stx.jr.controller.View1" xmlns:core="sap.ui.core">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Asset.controller.Assetdetails" xmlns:core="sap.ui.core">
+<Page title="Asset Management">
+<IconTabBar >
+        <items>
+        <IconTabFilter icon="sap-icon://notes" text="More Info">
+        <core:Fragment fragmentName="Asset.fragments.assetTable" type="XML"></core:Fragment>
+        </IconTabFilter>
+        </items>
+        </IconTabBar>
 <Button text="Next" press="onGoTo" icon="sap-icon://begin" tooltip="Go to next"></Button>
+</Page>
 </mvc:View>

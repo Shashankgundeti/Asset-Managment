@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stx.jr.controller.App">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Asset.controller.App">
 <!-- Adding  the container control -->
-<SplitApp id="idAppCon"></SplitApp>
+<App id="idAppCon"></App>
 </mvc:View>
